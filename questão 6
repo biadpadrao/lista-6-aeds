@@ -1,0 +1,25 @@
+// Faça um programa para preencher uma matriz 4 x 4, em seguida apresentar na tela a soma
+dos elementos abaixo da diagonal principal. Mostre na tela os elementos da diagonal
+principal também. 
+
+#include <stdio.h>
+
+int main(void) {
+  int m = 4, soma = 0;
+  float M[4][4];
+  for (int l=0; l < m; l++) {
+    for (int c=0; c < m; c++) {
+      M[l][c] = rand()%16;
+      printf("%.0f ", M[l][c]);
+    }
+    printf("\n");
+  }
+  
+  printf("\nElementos da diagonal principal: %.0f %.0f %.0f %.0f", M[0][0], M[1][1], M[2][2], M[3][3]);
+
+  soma = M[1][0] + M[2][0] + M[3][0] + M[2][1] + M[3][1] + M[3][2]; // = abaixo da diag principal
+
+  printf("\nSoma dos elementos abaixo da diagonal principal: %d", soma);
+  
+  return 0;
+}

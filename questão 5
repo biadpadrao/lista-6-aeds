@@ -1,0 +1,73 @@
+// Faça um procedimento que preencha uma matriz M 5 x 5. Faça uma função que receba
+uma matriz preenchida, calcule e retorne cada uma das somas a seguir (uma função para
+cada letra abaixo):
+a) da linha 4 de M
+b) da coluna 2 de M
+c) da diagonal principal
+d) da diagonal secundária
+e) de todos os elementos da matriz.
+
+#include <stdio.h>
+
+int m = 5; 
+
+float letraA(float B[][m], int n) { // soma da linha 4
+  float r = 0;
+  for (int i = 0; i < m; i++)
+    r += B[n][i];
+  return r;
+}
+
+float letraB(float B[][m], int n) { // soma da coluna 2
+  float r = 0;
+  for (int i = 0; i < m; i++)
+    r += B[i][n];
+  return r;
+}
+
+float letraC(float B[m][m], int n) { // soma diagonal principal ((0,0)+(1,1)+(2,2))
+  float r = 0;
+  for (int i = 0; i < n; i++)
+    r += B[i][i];
+  return r;
+}
+
+float letraD(float B[][m], int n) { // soma diagonal secundária ((0,4)+(1,3)+(2,2)+(3,1)+(4,0))
+  float r = 0;
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+      if ((i + j) == 4)
+        r += B[i][j];
+    }
+  }
+  return r;
+}
+
+float letraE(float *B, int n) { // soma todos
+  float r = 0;
+  for (int i = 0; i < n; i++)
+    r += B[i];
+  return r;
+}
+
+int main(void) {
+  float M[m][m];
+  for (int l = 0; l < m; l++) {
+    for (int c = 0; c < m; c++) {
+      M[l][c] = rand() % 25 + 1;
+      printf("%.0f ", M[l][c]);
+    }
+    printf("\n");
+  }
+  float linha4 = letraA(M, 4);
+  printf("\nSoma da linha 4: %.0f", linha4);
+  float coluna2 = letraB(M, 2);
+  printf("\nSoma da coluna 2: %.0f", coluna2);
+  float diagP = letraC(M, m);
+  printf("\nSoma da diagonal principal: %.0f", diagP);
+  float diagS = letraD(M, m);
+  printf("\nSoma diagonal secundária: %.0f", diagS);
+  float soma = letraE(M, m*m);
+  printf("\nSoma de todos os elementos: %.0f", soma);
+  return 0;
+}

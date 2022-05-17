@@ -1,0 +1,55 @@
+// Em uma cidade, sabe-se hipoteticamente que, em janeiro de 2021, não ocorreu temperatura
+inferior a 15°C, nem superior a 40°C. Faça um programa que armazene as temperaturas de
+cada dia de janeiro em um vetor (de 31 posições), calcule e imprima:
+- A menor e a maior temperatura ocorrida;
+- A temperatura média;
+- O número de dias nos quais a temperatura foi inferior a temperatura média
+
+#include <stdio.h>
+
+int n = 31;
+
+void media (float *vetor) { // B) temperatura média
+  float soma = 0, dias = 0, m;
+  
+  for (int i = 0; i < n; i++)
+    soma += vetor[i];
+  m = soma/n;
+  printf ("\nTemperatura média no mês: %.1f", m);
+  
+  for (int i = 0; i < n; i++) {
+    if (vetor[i] < m)
+      dias++; // C) conta quantos dias foram acima da media
+  }
+  printf ("\n%.0f dias foram abaixo dessa média", dias);
+}
+
+int main(void) {
+  int num, d=0;
+  int maior = 0, menor = 0;
+  float vtemp[n];
+  do {
+    num = rand ()%100; 
+    if ((num >= 15)&&(num <= 40)) { // temp entre 15 e 40 graus
+      vtemp[d] = num;
+      d++;
+    }
+  } while (d<31); // 31 dias = duração de janeiro
+  
+  maior = vtemp[0]; // maior temperatura 
+  for (int i = 0; i < n; i++) {
+    if (vtemp[i] > maior)
+      maior = vtemp[i];
+  }
+  printf ("Maior temperatura: %d", maior);
+  
+  menor = vtemp[0]; // menor temperatura 
+  for (int i = 0; i < n; i++) {
+    if (vtemp[i] < menor)
+      menor = vtemp[i];
+  }
+  printf ("\nMenor temperatura: %d", menor);
+  
+  media(vtemp);
+  return 0;
+}

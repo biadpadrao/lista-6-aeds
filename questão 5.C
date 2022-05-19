@@ -1,11 +1,10 @@
-// Faça um procedimento que preencha uma matriz M 5 x 5. Faça uma função que receba
-uma matriz preenchida, calcule e retorne cada uma das somas a seguir (uma função para
-cada letra abaixo):
-a) da linha 4 de M
-b) da coluna 2 de M
-c) da diagonal principal
-d) da diagonal secundária
-e) de todos os elementos da matriz.
+// Faça um procedimento que preencha uma matriz M 5 x 5. Faça uma função que receba uma matriz preenchida,
+// calcule e retorne cada uma das somas a seguir (uma função para cada letra abaixo):
+// a) da linha 4 de M
+// b) da coluna 2 de M
+// c) da diagonal principal
+// d) da diagonal secundária
+// e) de todos os elementos da matriz.
 
 #include <stdio.h>
 

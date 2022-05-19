@@ -1,4 +1,6 @@
-// Faça um procedimento que receba e preencha um vetor com as notas de uma turma de 10 alunos. Faça um outro procedimento que receba um vetor preenchido com as notas, calcule a média da turma e conte quantos alunos obtiveram nota acima da média. Esse procedimento deve exibir a média e o resultado da contagem. Faça um programa que declare as devidas variáveis e acione os procedimentos.
+// Faça um procedimento que receba e preencha um vetor com as notas de uma turma de 10 alunos. 
+// Faça um outro procedimento que receba um vetor preenchido com as notas, calcule a média da turma e
+// conte quantos alunos obtiveram nota acima da média. Esse procedimento deve exibir a média e o resultado da contagem
 
 #include <stdio.h>
 

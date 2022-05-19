@@ -1,9 +1,8 @@
-// Em uma cidade, sabe-se hipoteticamente que, em janeiro de 2021, não ocorreu temperatura
-inferior a 15°C, nem superior a 40°C. Faça um programa que armazene as temperaturas de
-cada dia de janeiro em um vetor (de 31 posições), calcule e imprima:
-- A menor e a maior temperatura ocorrida;
-- A temperatura média;
-- O número de dias nos quais a temperatura foi inferior a temperatura média
+// Em uma cidade, sabe-se hipoteticamente que, em janeiro de 2021, não ocorreu temperatura inferior a 15°C, nem superior a 40°C.
+// Faça um programa que armazene as temperaturas de cada dia de janeiro em um vetor (de 31 posições), calcule e imprima:
+// A) A menor e a maior temperatura ocorrida;
+// B) A temperatura média;
+// C) O número de dias nos quais a temperatura foi inferior a temperatura média
 
 #include <stdio.h>
 
@@ -49,7 +48,6 @@ int main(void) {
       menor = vtemp[i];
   }
   printf ("\nMenor temperatura: %d", menor);
-  
   media(vtemp);
   return 0;
 }

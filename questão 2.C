@@ -1,7 +1,6 @@
 // Faça um procedimento que preencha um vetor X de 10 elementos. A seguir faça uma função que receba um vetor preenchido,
-teste e copie todos os valores negativos deste vetor para um novo vetor (sem deixar elementos vazios entre os valores copiados),
-retornando este vetor como resultado. Faça um procedimento que recebe e exibe o conteúdo de um vetor. Faça um programa
-que faça as devidas declarações e acione os módulos para exemplificar o seu uso.
+// teste e copie todos os valores negativos deste vetor para um novo vetor (sem deixar elementos vazios entre os valores copiados),
+// retornando este vetor como resultado. Faça um procedimento que recebe e exibe o conteúdo de um vetor. 
 
 #include <stdio.h>
 

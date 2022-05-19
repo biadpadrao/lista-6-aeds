@@ -1,6 +1,5 @@
-// Faça um programa para preencher uma matriz 4 x 4, em seguida apresentar na tela a soma
-dos elementos abaixo da diagonal principal. Mostre na tela os elementos da diagonal
-principal também. 
+// Faça um programa para preencher uma matriz 4 x 4, em seguida apresentar na tela a soma dos elementos abaixo da diagonal principal.
+// Mostre na tela os elementos da diagonal principal também. 
 
 #include <stdio.h>
 

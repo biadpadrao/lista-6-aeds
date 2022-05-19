@@ -4,9 +4,9 @@ principal também.
 
 #include <stdio.h>
 
-int main(void) {
-  int m = 4, soma = 0;
-  float M[4][4];
+int main(void) { 
+  int m = 4;
+  float M[4][4], soma = 0;
   for (int l=0; l < m; l++) {
     for (int c=0; c < m; c++) {
       M[l][c] = rand()%16;
@@ -15,11 +15,20 @@ int main(void) {
     printf("\n");
   }
   
-  printf("\nElementos da diagonal principal: %.0f %.0f %.0f %.0f", M[0][0], M[1][1], M[2][2], M[3][3]);
+  printf("\nElementos da diagonal principal: ");
+  for (int l=0; l < m; l++) {
+    for (int c=0; c < m; c++) {
+      if (l==c)
+        printf ("%.0f ", M[l][c]);
+    }
+  }
 
-  soma = M[1][0] + M[2][0] + M[3][0] + M[2][1] + M[3][1] + M[3][2]; // = abaixo da diag principal
-
-  printf("\nSoma dos elementos abaixo da diagonal principal: %d", soma);
-  
+  for (int l=0; l < m; l++) {
+    for (int c=0; c < m; c++) {
+      if (l>c)
+        soma+= M[l][c];
+    }
+  }
+  printf("\nSoma dos elementos abaixo da diagonal: %.0f\n", soma);
   return 0;
 }
